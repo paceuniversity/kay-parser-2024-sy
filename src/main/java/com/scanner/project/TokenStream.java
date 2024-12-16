@@ -158,7 +158,9 @@ public class TokenStream {
 		// Then check for a separator
 		if (isSeparator(nextChar)) {
 			t.setType("Separator");
+			t.setValue(t.getValue() + nextChar);
 			// TODO TO BE COMPLETED
+			nextChar = readChar();
 			return t;
 		}
 
